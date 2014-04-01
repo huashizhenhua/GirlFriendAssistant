@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zenip.gfassistant"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <!--
+         Permission for INTERNET is required for streaming video content
+         from the web, it's not required otherwise.
+    -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--
+         Permission for SYSTEM_ALERT_WINDOW is only required for emulating
+         remote display using system alert window.
+    -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="17" />
+ 
+    <!--
+         The smallest screen this app works on is a phone.  The app will
+         scale its UI to larger screens but doesn't make good use of them
+         so allow the compatibility mode button to be shown (mostly because
+         this is just convenient for testing).
+    -->
+    <!-- 
+    <supports-screens
+        android:compatibleWidthLimitDp="480"
+        android:requiresSmallestWidthDp="320" />
+         -->
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        <activity
+            android:name="MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/GFATheme.Holo" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

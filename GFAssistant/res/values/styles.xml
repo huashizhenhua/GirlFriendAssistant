@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <!-- Themes in the "Theme.AppCompat" family will contain an action bar by default.
+         If Holo themes are available on the current platform version they will be used.
+         A limited Holo-styled action bar will be provided on platform versions older
+         than 3.0. (API 11)
+
+         These theme declarations contain any version-independent specification. Items
+         that need to vary based on platform version should be defined in the corresponding
+         "Theme.Base" theme. -->
+
+    <!-- Platform-independent theme providing an action bar in a dark-themed activity. -->
+    <style name="GFATheme.Holo" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:buttonStyle">@android:style/Widget.Button</item>
+        <item name="actionBarStyle">@style/GFAActionBar.Solid</item>
+        <item name="actionBarItemBackground">@drawable/actionbar_menu_selector</item>
+        <item name="homeAsUpIndicator">@drawable/actionbar_up_indicator</item>
+    </style>
+    
+    
+    <style name="GFAActionBar.Solid" parent="@style/Widget.AppCompat.ActionBar">
+        <item name="android:icon">@drawable/actionbar_icon_layer_big_padding</item>
+        <item name="android:background">@drawable/actionbar_bg</item>
+        <item name="titleTextStyle">@style/GAFActionBar.TitleTextStyle</item>
+        <item name="subtitleTextStyle">@style/MMActionBar.SubTitleTextStyle</item>
+        <item name="icon">@drawable/actionbar_icon_layer_big_padding</item>
+        <item name="background">@drawable/actionbar_bg</item>
+        <item name="backgroundStacked">@drawable/actionbar_bg</item>
+        <item name="backgroundSplit">@drawable/actionbar_bg</item>
+        <item name="indeterminateProgressStyle">@style/ActionBarCustomProgressBar</item>
+    </style>
+    
+    <style name="GAFActionBar.TitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textSize">@dimen/BigTextSize</item>
+        <item name="android:textColor">@color/action_bar_tittle_color</item>
+    </style>
+    
+    <style name="MMActionBar.SubTitleTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textSize">@dimen/HintTextSize</item>
+        <item name="android:textColor">@color/hint_text_color</item>
+    </style>
+    
+    <style name="ActionBarCustomProgressBar" parent="@style/Widget.AppCompat.ProgressBar">
+        <item name="android:indeterminateDrawable">@drawable/progress_actionbar_holo</item>
+    </style>
+
+</resources>
